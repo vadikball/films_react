@@ -1,5 +1,3 @@
-import React, { useEffect, useState, useRef } from 'react';
-
 import Message from './Message';
 
 export default function Chat({ holderRef, chatState, inputRef, sendMessage }) {

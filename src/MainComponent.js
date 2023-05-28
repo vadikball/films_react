@@ -1,9 +1,12 @@
+import { useParams } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from 'react';
 
 import Chat from './Chat';
 import Player from './Player';
 
-export default function MainComponent() {
+export default function MainComponent({ user }) {
+  console.log(user);
+  const { uuid } = useParams();
   const videoRef = useRef(null);
   const wsRef = useRef(null);
   const room_id = useRef('35b3eae3-515c-477f-8a28-d97e38f7373e');
@@ -14,7 +17,7 @@ export default function MainComponent() {
   const [lastMessageS, setMessage] = useState(null);
   const inputRef = useRef(null);
   const holderRef = useRef(null);
-  const [chatState, setChatState] = useState([{ login: 'Test l', messageText: 'Test M' }]);
+  const [chatState, setChatState] = useState([{ login: 'Test l', messageText: uuid }]);
   //const [wsstate, setws] = useState(null);
   const [senderstate, setsender] = useState(null);
 

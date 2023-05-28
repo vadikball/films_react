@@ -19,6 +19,19 @@
   display: flex;
   font-size: calc(10px + 2vmin);
   color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.Auth {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavBar {
+  position: fixed;
+  left: 1%;
+  top: 1%;
 }
 
 .App-link {
@@ -44,13 +57,15 @@
   border: 5px;
   padding: 4%;
   margin: 4%;
+  width: 100vh;
 }
 
 .PlayerControl {
   display: flex;
 }
 
-.Chat {
+.Chat,
+.RoomList {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -59,7 +74,8 @@
   margin: 5%;
 }
 
-.ChatHolder {
+.ChatHolder,
+.RoomList {
   background-color: transparent;
   border: 2px solid rgba(28, 110, 164, 0);
   border-radius: 10px;
@@ -71,6 +87,23 @@
   overflow: auto;
 
   display: flex;
+}
+
+.RoomList {
+  border: 2px solid rgb(28, 110, 164);
+
+  padding: 5px;
+  margin: 5% 20% 5% 0%;
+}
+
+.NewRoom {
+  border: 2px solid rgba(80, 129, 161, 0.466);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .InputHolder {
@@ -131,4 +164,70 @@
 
 .MessageText {
   font-size: medium;
+}
+
+.NewRoomInput {
+  background: #fbfbfb00;
+  border: 1px solid #007ae500;
+  margin: 5px 0px;
+  color: #fbfbfb;
+  font-size: calc(5px + 2vmin);
+}
+
+a:link {
+  color: aqua;
+  text-decoration: none;
+}
+
+a:visited {
+  color: aqua;
+  text-decoration: none;
+}
+
+a:active {
+  color: rgba(0, 255, 255, 0);
+  text-decoration: none;
+}
+
+.RoomInfo {
+  font-size: calc(5px + 2vmin);
+  border: 2px solid rgba(80, 129, 161, 0.466);
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.RoomText {
+  background: #fbfbfb00;
+  border: 1px solid #007ae500;
+  margin: 5px 0px;
+  color: #fbfbfb;
+}
+
+.NewRoomButton {
+  background: #fbfbfb00;
+  width: 20%;
+  height: 30%;
+  font-size: calc(10px + 2vmin);
+  color: aqua;
+  padding: 0;
+}
+
+.AuthTitleHolder {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.LogOutButton {
+  position: fixed;
+  top: 1%;
+  right: 1%;
 }
