@@ -4,7 +4,7 @@ import RoomInfo from './RoomInfo';
 export default function RoomList({ rooms, setRooms, user }) {
   const fetchRooms = async () => {
     console.log('Bearer ' + user.access_token);
-    const raw = await fetch('http://localhost/api/wt/v1/users/rooms', {
+    const raw = await fetch('http://localhost/api/wt/v1/users/rooms_enriched', {
       headers: {
         Authorization: 'Bearer ' + user.access_token,
       },
@@ -24,7 +24,7 @@ export default function RoomList({ rooms, setRooms, user }) {
     <div className="RoomList">
       Rooms
       {rooms.map((room) => (
-        <RoomInfo roomName={room.name} filmName={room.film_id} uuid={room.id} />
+        <RoomInfo roomName={room.name} filmName={room.film_name} uuid={room.id} />
       ))}
     </div>
   );

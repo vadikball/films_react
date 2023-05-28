@@ -5,6 +5,7 @@ export default function RoomInfo({ roomName, filmName, uuid }) {
     <div className="RoomInfo" key={uuid}>
       <Link to={`/watch-together/room/${uuid}`}>
         <div className="RoomText">{roomName}</div>
+        <div className="RoomText">{filmName}</div>
       </Link>
     </div>
   );
